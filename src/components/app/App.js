@@ -43,8 +43,8 @@ export default class App extends React.Component {
         return (
             <div className={"container"}>
                 <Header {...this.header}/>
-                {/*<RandomPlanet />
-                <PeoplePage/>*/}
+                <RandomPlanet />
+                <PeoplePage/>
                {/* <div className="f-row f-row_start row-detail">
                     <ItemsList getData={this.swapiService.getAllPlanets} onSelect={()=>{}}/>
                 </div>*/}
