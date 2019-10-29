@@ -11,6 +11,7 @@ class ItemDetail extends React.Component {
 
         this.state={
             item: null,
+            image: null,
             loading: false,
             error: false
         }
@@ -21,12 +22,18 @@ class ItemDetail extends React.Component {
     }
 
     updateItem = ()=>{
-        const {itemId} = this.props;
+        const {itemId, getData, getImgUrl} = this.props;
+        console.log(typeof getData);
         if (!itemId) {return;}
         this.setState({loading: true});
-        this.swapiService.getPerson(itemId)
+
+        getData(itemId)
             .then((item)=>{
-                this.setState({item: item, error: false})
+                this.setState({
+                    item: item,
+                    image: getImgUrl(item),
+                    error: false
+                })
             })
             .then(()=>{
                 this.setState({loading: false})
@@ -36,19 +43,19 @@ class ItemDetail extends React.Component {
             })
     };
 
-    swapiService = new SwapiService();
+
 
     componentDidUpdate(prevProps, prevState) {
         if (this.props.itemId !== prevProps.itemId) {
              this.updateItem();
         }
     }
-    renderData = (item, personId)=>{
+    renderData = (item)=>{
         const  {name, gender, birthYear, eyeColor} = item;
         return(
             <React.Fragment>
                 <div className="image">
-                    <img src={`https://starwars-visualguide.com/assets/img/characters/${personId}.jpg`} alt=""/>
+                    <img src={this.state.image} alt=""/>
                 </div>
                 <div className="info">
                     <div className={"list-group-item row-info"}>

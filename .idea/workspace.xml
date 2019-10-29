@@ -2,25 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4cbf6418-68da-4aa1-9265-427f0e8cec7a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/record/Record.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/error-boundary/ErrorBoundary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/error-boundary/ErrorBoundary.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/error-indicator/ErrorIndicator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/error-indicator/ErrorIndicator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/error-indicator/error-indicator.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/error-indicator/error-indicator.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/item-detail/ItemDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/item-detail/ItemDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/item-list/ItemsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/item-list/ItemsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/item-list/items-list.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/item-list/items-list.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/peoplePage/PeoplePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/peoplePage/PeoplePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/random-planet/Random-planet.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/random-planet/Random-planet.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/random-planet/random-planet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/random-planet/random-planet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/row/Row.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/row/Row.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/spinner/spinner.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/spinner/spinner.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/spinner/spinner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/spinner/spinner.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/detail.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/detail.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/swapi-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/swapi-service.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,20 +24,38 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/services/swapi-service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1025">
-              <caret line="41" column="6" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
+            <state relative-caret-position="353">
+              <caret line="45" column="40" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/record/Record.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/app/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="50" column="62" selection-start-line="50" selection-start-column="62" selection-end-line="50" selection-end-column="62" />
+            <state relative-caret-position="300">
+              <caret line="42" column="130" selection-start-line="42" selection-start-column="130" selection-end-line="42" selection-end-column="130" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -69,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/item-detail/ItemDetail.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2050">
-              <caret line="86" column="25" lean-forward="true" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="25" />
+            <state relative-caret-position="300">
+              <caret line="63" column="26" lean-forward="true" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -85,7 +88,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/peoplePage/PeoplePage.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="800">
-              <caret line="38" column="20" lean-forward="true" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+              <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -106,7 +109,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/item-list/ItemsList.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="825">
-              <caret line="36" column="23" lean-forward="true" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+              <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -118,7 +121,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/error-boundary/ErrorBoundary.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -156,15 +159,16 @@
         <option value="$PROJECT_DIR$/src/components/error-indicator/error-indicator.css" />
         <option value="$PROJECT_DIR$/src/components/random-planet/Random-planet.js" />
         <option value="$PROJECT_DIR$/src/components/person-detail/PersonDetail.js" />
-        <option value="$PROJECT_DIR$/src/services/swapi-service.js" />
         <option value="$PROJECT_DIR$/src/components/item-list/ItemsList.js" />
         <option value="$PROJECT_DIR$/src/components/item-list/items-list.css" />
         <option value="$PROJECT_DIR$/src/components/row/Row.js" />
         <option value="$PROJECT_DIR$/src/css/detail.css" />
-        <option value="$PROJECT_DIR$/src/components/item-detail/ItemDetail.js" />
         <option value="$PROJECT_DIR$/src/components/peoplePage/PeoplePage.js" />
         <option value="$PROJECT_DIR$/src/components/error-boundary/ErrorBoundary.js" />
+        <option value="$PROJECT_DIR$/src/components/item-detail/ItemDetail.js" />
         <option value="$PROJECT_DIR$/src/components/app/App.js" />
+        <option value="$PROJECT_DIR$/src/services/swapi-service.js" />
+        <option value="$PROJECT_DIR$/src/components/record/Record.js" />
       </list>
     </option>
   </component>
@@ -180,7 +184,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -209,62 +212,7 @@
               <item name="starwars" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="error-indicator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="starwars" type="b2602c69:ProjectViewProjectNode" />
-              <item name="starwars" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="header" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="starwars" type="b2602c69:ProjectViewProjectNode" />
-              <item name="starwars" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="item-detail" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="starwars" type="b2602c69:ProjectViewProjectNode" />
-              <item name="starwars" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="item-list" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="starwars" type="b2602c69:ProjectViewProjectNode" />
-              <item name="starwars" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="peoplePage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="starwars" type="b2602c69:ProjectViewProjectNode" />
-              <item name="starwars" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="random-planet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="starwars" type="b2602c69:ProjectViewProjectNode" />
-              <item name="starwars" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="row" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="starwars" type="b2602c69:ProjectViewProjectNode" />
-              <item name="starwars" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="spinner" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="starwars" type="b2602c69:ProjectViewProjectNode" />
-              <item name="starwars" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="record" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="starwars" type="b2602c69:ProjectViewProjectNode" />
@@ -276,6 +224,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -343,16 +292,26 @@
       <workItem from="1572173990897" duration="1205000" />
       <workItem from="1572283396771" duration="2326000" />
       <workItem from="1572330876229" duration="239000" />
+      <workItem from="1572378670304" duration="5049000" />
     </task>
+    <task id="LOCAL-00001" summary="fix">
+      <created>1572378865998</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1572378865998</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56916000" />
+    <option name="totallyTimeSpent" value="61965000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21013513" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21351351" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -366,8 +325,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50135136" side_tool="true" visible="true" weight="0.27687776" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49864864" visible="true" weight="0.27687776" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50202703" side_tool="true" visible="true" weight="0.27687776" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49797297" visible="true" weight="0.27687776" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -377,6 +336,10 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/public/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor" />
@@ -385,16 +348,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -470,13 +423,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/swapi-service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1025">
-          <caret line="41" column="6" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/random-planet/Random-planet.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -487,20 +433,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/item-detail/ItemDetail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2050">
-          <caret line="86" column="25" lean-forward="true" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/peoplePage/PeoplePage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="800">
-          <caret line="38" column="20" lean-forward="true" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -517,7 +453,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/item-list/ItemsList.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
-          <caret line="36" column="23" lean-forward="true" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -527,17 +463,48 @@
     <entry file="file://$PROJECT_DIR$/src/components/error-boundary/ErrorBoundary.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/app/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="50" column="62" selection-start-line="50" selection-start-column="62" selection-end-line="50" selection-end-column="62" />
+        <state relative-caret-position="300">
+          <caret line="42" column="130" selection-start-line="42" selection-start-column="130" selection-end-line="42" selection-end-column="130" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/swapi-service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="45" column="40" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/record/Record.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/item-detail/ItemDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="63" column="26" lean-forward="true" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

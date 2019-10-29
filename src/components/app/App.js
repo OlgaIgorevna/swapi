@@ -7,6 +7,7 @@ import PeoplePage from "../peoplePage/PeoplePage";
 import SwapiService from "../../services/swapi-service";
 import Row from "../row/Row";
 export default class App extends React.Component {
+    swapiService = new SwapiService();
 
     header =  {title: 'Star DB',
         menu: [{to: "#", label: "people"},
@@ -36,15 +37,15 @@ export default class App extends React.Component {
             return arr;
         }
     };
-    swapiService = new SwapiService();
+
     render() {
-        const personDetail =  (<ItemDetail itemId={11}/>);
-        const starshipDetail =  (<ItemDetail itemId={5}/>);
+        const personDetail =  (<ItemDetail getImgUrl={this.swapiService.getPersonImage} getData={this.swapiService.getPerson} itemId={11}/>);
+        const starshipDetail =  (<ItemDetail getImgUrl={this.swapiService.getStarshipImage} getData={this.swapiService.getStarship} itemId={5}/>);
         return (
             <div className={"container"}>
                 <Header {...this.header}/>
-                <RandomPlanet />
-                <PeoplePage/>
+              {/*  <RandomPlanet />
+                <PeoplePage/>*/}
                {/* <div className="f-row f-row_start row-detail">
                     <ItemsList getData={this.swapiService.getAllPlanets} onSelect={()=>{}}/>
                 </div>*/}
