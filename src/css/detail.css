@@ -27,6 +27,7 @@
 }
 .f-row{
     display: flex;
+    flex-wrap: wrap;
 }
 .f-row_start{
     align-items: flex-start;

@@ -1,0 +1,9 @@
+.items-list{
+   /* flex-basis: 40%;
+    flex-shrink: 0;
+    padding-right: 30px;*/
+}
+.items-list .item:hover{
+    background-color: rgba(48, 48, 48, 0.8);
+    cursor: pointer;
+}

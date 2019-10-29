@@ -1,0 +1,30 @@
+.random-planet{
+    padding: 20px;
+    background: rgba(255,255,255,0.1);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.row-planet{
+    display: flex;
+}
+.random-planet .image-planet{
+    margin-right: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+.random-planet .name{
+    font-size: 30px;
+}
+.random-planet .data .label{
+    margin-right: 10px;
+}
+.random-planet .data .row-info{
+    display: flex
+}

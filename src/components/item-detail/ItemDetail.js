@@ -4,29 +4,29 @@ import SwapiService from "../../services/swapi-service";
 import Spinner from "../spinner/spinner";
 import ErrorIndicator from "../error-indicator/ErrorIndicator";
 
-class PersonDetail extends React.Component {
+class ItemDetail extends React.Component {
 
     constructor(props){
         super(props);
 
         this.state={
-            person: null,
+            item: null,
             loading: false,
             error: false
         }
     }
 
     componentDidMount() {
-        this.updatePerson();
+        this.updateItem();
     }
 
-    updatePerson = ()=>{
-        const {personId} = this.props;
-        if (!personId) {return;}
+    updateItem = ()=>{
+        const {itemId} = this.props;
+        if (!itemId) {return;}
         this.setState({loading: true});
-        this.swapiService.getPerson(personId)
-            .then((person)=>{
-                this.setState({person: person, error: false})
+        this.swapiService.getPerson(itemId)
+            .then((item)=>{
+                this.setState({item: item, error: false})
             })
             .then(()=>{
                 this.setState({loading: false})
@@ -39,12 +39,12 @@ class PersonDetail extends React.Component {
     swapiService = new SwapiService();
 
     componentDidUpdate(prevProps, prevState) {
-        if (this.props.personId !== prevProps.personId) {
-             this.updatePerson();
+        if (this.props.itemId !== prevProps.itemId) {
+             this.updateItem();
         }
     }
-    renderData = (person, personId)=>{
-        const  {name, gender, birthYear, eyeColor} = person;
+    renderData = (item, personId)=>{
+        const  {name, gender, birthYear, eyeColor} = item;
         return(
             <React.Fragment>
                 <div className="image">
@@ -76,12 +76,12 @@ class PersonDetail extends React.Component {
     };
     render(){
         const {loading} = this.state;
-        if ((!this.state.person)&& (!this.state.error)) return <span>Please, choose a person from a list</span>;
+        if ((!this.state.item)&& (!this.state.error)) return <span>Please, choose a person from a list</span>;
         if (this.state.error) return <ErrorIndicator/>
-        const {person} = this.state;
-        const {personId} = this.props;
+        const {item} = this.state;
+        const {itemId} = this.props;
 
-      const content = loading ? <Spinner/> : this.renderData(person, personId);
+      const content = loading ? <Spinner/> : this.renderData(item, itemId);
         return (
             <div className={"detail"}>
                 {content}
@@ -89,7 +89,7 @@ class PersonDetail extends React.Component {
         )
     };
 }
-export default PersonDetail;
+export default ItemDetail;
 
 class ErrorButton extends React.Component{
     state={
