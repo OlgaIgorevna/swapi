@@ -23,7 +23,7 @@ class ItemDetail extends React.Component {
 
     updateItem = ()=>{
         const {itemId, getData, getImgUrl} = this.props;
-        console.log(typeof getData);
+
         if (!itemId) {return;}
         this.setState({loading: true});
 
@@ -51,33 +51,17 @@ class ItemDetail extends React.Component {
         }
     }
     renderData = (item)=>{
-        const  {name, gender, birthYear, eyeColor} = item;
+
         return(
             <React.Fragment>
-                <div className="image">
-                    <img src={this.state.image} alt=""/>
-                </div>
-                <div className="info">
-                    <div className={"list-group-item row-info"}>
-                        <div className="label">Name</div>
-                        <div className="value">{name}</div>
-                    </div>
-                    <div className={"list-group-item row-info"}>
-                        <div className="label">Gender</div>
-                        <div className="value">{gender}</div>
-                    </div>
-                    <div className={"list-group-item row-info"}>
-                        <div className="label">Birth year</div>
-                        <div className="value">{birthYear}</div>
-                    </div>
-                    <div className={"list-group-item row-info"}>
-                        <div className="label">Eye Color</div>
-                        <div className="value">{eyeColor}</div>
-                    </div>
+                    {
+                        React.Children.map(this.props.children, (child, idx)=>{
 
-                    <ErrorButton></ErrorButton>
+                            return React.cloneElement(child, {item} )
 
-                </div>
+                        })
+                    }
+
             </React.Fragment>
         )
     };
@@ -86,12 +70,24 @@ class ItemDetail extends React.Component {
         if ((!this.state.item)&& (!this.state.error)) return <span>Please, choose a person from a list</span>;
         if (this.state.error) return <ErrorIndicator/>
         const {item} = this.state;
-        const {itemId} = this.props;
 
-      const content = loading ? <Spinner/> : this.renderData(item, itemId);
+
+      /*const content = loading ? <Spinner/> : this.renderData(item);*/
         return (
             <div className={"detail"}>
-                {content}
+             {/*   {content}*/}
+
+                    <div className="image">
+                        <img src={this.state.image} alt=""/>
+                    </div>
+
+                    <div className="info">
+                         {this.renderData(item)}
+
+                        <ErrorButton></ErrorButton>
+
+                    </div>
+
             </div>
         )
     };

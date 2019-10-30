@@ -6,6 +6,7 @@ import ItemDetail from "../item-detail/ItemDetail";
 import PeoplePage from "../peoplePage/PeoplePage";
 import SwapiService from "../../services/swapi-service";
 import Row from "../row/Row";
+import Record from "../record/Record";
 export default class App extends React.Component {
     swapiService = new SwapiService();
 
@@ -38,17 +39,44 @@ export default class App extends React.Component {
         }
     };
 
+    renderPlanetListItem = (planet)=>{
+        return <div> {`${planet.name}, diameter: ${planet.diameter}` }</div>
+    };
+    renderPersontListItem = (person)=>{
+        return <div> {`${person.name}, Birth Year: ${person.birthYear}` }</div>
+    };
+
     render() {
-        const personDetail =  (<ItemDetail getImgUrl={this.swapiService.getPersonImage} getData={this.swapiService.getPerson} itemId={11}/>);
-        const starshipDetail =  (<ItemDetail getImgUrl={this.swapiService.getStarshipImage} getData={this.swapiService.getStarship} itemId={5}/>);
+        const personDetail =  (
+            <ItemDetail
+                getImgUrl={this.swapiService.getPersonImage}
+                getData={this.swapiService.getPerson}
+                itemId={11} >
+                <Record field = "gender" label = "Gender"/>
+                <Record field = "eyeColor" label = "Eye Color"/>
+            </ItemDetail>
+
+            );
+        const starshipDetail =  (
+            <ItemDetail
+                getImgUrl={this.swapiService.getStarshipImage}
+                getData={this.swapiService.getStarship}
+                itemId={5}>
+                <Record field = "name" label = "Name"/>
+                <Record field = "length" label = "length"/>
+                <Record field = "cost_in_credits" label = "Cost"/>
+            </ItemDetail>
+                );
         return (
             <div className={"container"}>
                 <Header {...this.header}/>
-              {/*  <RandomPlanet />
-                <PeoplePage/>*/}
-               {/* <div className="f-row f-row_start row-detail">
-                    <ItemsList getData={this.swapiService.getAllPlanets} onSelect={()=>{}}/>
-                </div>*/}
+                <RandomPlanet />
+                {/*<PeoplePage/>*/}
+                <div className="f-row f-row_start row-detail">
+                    {/*<ItemsList getData={this.swapiService.getAllPlanets} onSelect={()=>{}} renderItem={this.renderPlanetListItem}/>*/}
+                    <ItemsList getData={this.swapiService.getAllPeople} onSelect={()=>{}} renderItem={this.renderPersontListItem}/>
+                </div>
+
                 <Row left={personDetail} right={starshipDetail}/>
             </div>
         )
