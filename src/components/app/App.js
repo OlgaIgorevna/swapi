@@ -7,6 +7,12 @@ import PeoplePage from "../peoplePage/PeoplePage";
 import SwapiService from "../../services/swapi-service";
 import Row from "../row/Row";
 import Record from "../record/Record";
+import {  PersonList,
+    PlanetList,
+    StarshipList,
+    PersonDetails,
+    PlanetDetails,
+    StarshipDetails} from "../sw-components"
 export default class App extends React.Component {
     swapiService = new SwapiService();
 
@@ -74,7 +80,10 @@ export default class App extends React.Component {
                 {/*<PeoplePage/>*/}
                 <div className="f-row f-row_start row-detail">
                     {/*<ItemsList getData={this.swapiService.getAllPlanets} onSelect={()=>{}} renderItem={this.renderPlanetListItem}/>*/}
-                    <ItemsList getData={this.swapiService.getAllPeople} onSelect={()=>{}} renderItem={this.renderPersontListItem}/>
+                 {/*   <ItemsList getData={this.swapiService.getAllPeople} onSelect={()=>{}} renderItem={this.renderPersontListItem}/>*/}
+
+                 <PersonList onSelect={()=>{}} renderItem={this.renderPersontListItem}/>
+                 <PlanetList onSelect={()=>{}} renderItem={this.renderPlanetListItem}/>
                 </div>
 
                 <Row left={personDetail} right={starshipDetail}/>

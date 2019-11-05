@@ -1,9 +1,6 @@
 import React from 'react';
 import './items-list.css';
 
-import Spinner from "../spinner/spinner";
-import SwapiService from "../../services/swapi-service";
-import withData from "../Hoc-helpers/WithData";
 
  const ItemsList = (props)=>{
 
@@ -29,6 +26,8 @@ import withData from "../Hoc-helpers/WithData";
 
 
 
-const {getAllPeople} = new SwapiService();
+//const {getAllPeople} = new SwapiService();
 
-export default withData(ItemsList, getAllPeople);
+//export default withData(ItemsList, getAllPeople);
+
+export default ItemsList;
