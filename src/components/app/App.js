@@ -12,7 +12,8 @@ import {  PersonList,
     StarshipList,
     PersonDetails,
     PlanetDetails,
-    StarshipDetails} from "../sw-components"
+    StarshipDetails,
+} from "../sw-components"
 export default class App extends React.Component {
     swapiService = new SwapiService();
 
@@ -84,9 +85,12 @@ export default class App extends React.Component {
 
                  <PersonList onSelect={()=>{}} renderItem={this.renderPersontListItem}/>
                  <PlanetList onSelect={()=>{}} renderItem={this.renderPlanetListItem}/>
+                 <PersonDetails itemId={2} />
+                 <PlanetDetails itemId={5}/>
+                 <StarshipDetails itemId={9} />
                 </div>
 
-                <Row left={personDetail} right={starshipDetail}/>
+                {/*<Row left={personDetail} right={starshipDetail}/>*/}
             </div>
         )
 

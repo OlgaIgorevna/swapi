@@ -43,25 +43,19 @@ class ItemDetail extends React.Component {
             })
     };
 
-
-
     componentDidUpdate(prevProps, prevState) {
         if (this.props.itemId !== prevProps.itemId) {
              this.updateItem();
         }
     }
     renderData = (item)=>{
-
         return(
             <React.Fragment>
                     {
                         React.Children.map(this.props.children, (child, idx)=>{
-
                             return React.cloneElement(child, {item} )
-
                         })
                     }
-
             </React.Fragment>
         )
     };
