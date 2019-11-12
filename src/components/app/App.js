@@ -54,43 +54,19 @@ export default class App extends React.Component {
     };
 
     render() {
-        const personDetail =  (
-            <ItemDetail
-                getImgUrl={this.swapiService.getPersonImage}
-                getData={this.swapiService.getPerson}
-                itemId={11} >
-                <Record field = "gender" label = "Gender"/>
-                <Record field = "eyeColor" label = "Eye Color"/>
-            </ItemDetail>
 
-            );
-        const starshipDetail =  (
-            <ItemDetail
-                getImgUrl={this.swapiService.getStarshipImage}
-                getData={this.swapiService.getStarship}
-                itemId={5}>
-                <Record field = "name" label = "Name"/>
-                <Record field = "length" label = "length"/>
-                <Record field = "cost_in_credits" label = "Cost"/>
-            </ItemDetail>
-                );
         return (
             <div className={"container"}>
                 <Header {...this.header}/>
                 <RandomPlanet />
                 {/*<PeoplePage/>*/}
                 <div className="f-row f-row_start row-detail">
-                    {/*<ItemsList getData={this.swapiService.getAllPlanets} onSelect={()=>{}} renderItem={this.renderPlanetListItem}/>*/}
-                 {/*   <ItemsList getData={this.swapiService.getAllPeople} onSelect={()=>{}} renderItem={this.renderPersontListItem}/>*/}
-
-                 <PersonList onSelect={()=>{}} renderItem={this.renderPersontListItem}/>
-                 <PlanetList onSelect={()=>{}} renderItem={this.renderPlanetListItem}/>
-                 <PersonDetails itemId={4} />
-                 <PlanetDetails itemId={6}/>
-                 <StarshipDetails itemId={9} />
+                     <PersonList onSelect={()=>{}} renderItem={this.renderPersontListItem}/>
+                     <PlanetList onSelect={()=>{}} renderItem={this.renderPlanetListItem}/>
+                     <PersonDetails itemId={4} />
+                     <PlanetDetails itemId={6}/>
+                     <StarshipDetails itemId={9} />
                 </div>
-
-                {/*<Row left={personDetail} right={starshipDetail}/>*/}
             </div>
         )
 
