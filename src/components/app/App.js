@@ -85,8 +85,8 @@ export default class App extends React.Component {
 
                  <PersonList onSelect={()=>{}} renderItem={this.renderPersontListItem}/>
                  <PlanetList onSelect={()=>{}} renderItem={this.renderPlanetListItem}/>
-                 <PersonDetails itemId={2} />
-                 <PlanetDetails itemId={5}/>
+                 <PersonDetails itemId={4} />
+                 <PlanetDetails itemId={6}/>
                  <StarshipDetails itemId={9} />
                 </div>
 
