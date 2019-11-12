@@ -4,13 +4,15 @@ import './items-list.css';
 
  const ItemsList = (props)=>{
 
+     console.log("children", props.children);
+
    const renderItems = (arr)=>{
         if (!arr) return null;
         return arr.map((item) =>
             <div className={"item list-group-item"} key={item.id} onClick={() => {
                 props.onSelect(item.id)
             }}>
-                {props.renderItem(item)}
+                {props.children(item)}
             </div>
         )
     };

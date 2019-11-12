@@ -46,12 +46,7 @@ export default class App extends React.Component {
         }
     };
 
-    renderPlanetListItem = (planet)=>{
-        return <div> {`${planet.name}, diameter: ${planet.diameter}` }</div>
-    };
-    renderPersontListItem = (person)=>{
-        return <div> {`${person.name}, Birth Year: ${person.birthYear}` }</div>
-    };
+
 
     render() {
 
@@ -61,7 +56,7 @@ export default class App extends React.Component {
                 <RandomPlanet />
                 {/*<PeoplePage/>*/}
                 <div className="f-row f-row_start row-detail">
-                     <PersonList onSelect={()=>{}} renderItem={this.renderPersontListItem}/>
+                     <PersonList onSelect={()=>{}}/>
                      <PlanetList onSelect={()=>{}} renderItem={this.renderPlanetListItem}/>
                      <PersonDetails itemId={4} />
                      <PlanetDetails itemId={6}/>
