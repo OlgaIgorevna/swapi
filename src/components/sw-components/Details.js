@@ -1,12 +1,14 @@
 import React from 'react';
-import SwapiService from "../../services/swapi-service";
+
 import ItemDetail from "../item-detail/ItemDetail";
 import Record from "../record/Record";
 import withDataUpdate from "../Hoc-helpers/WithDataUpdate";
+import {SwapiServiceConsumer} from "../swapi-service-context/swapi-service-context"
+import withSwapiService from "../Hoc-helpers/WithSwapiService"
 
-const swapiService = new SwapiService();
+/*const swapiService = new SwapiService();*/
 
-const {
+/*const {
     getPerson,
     getPlanet,
     getStarship,
@@ -14,56 +16,103 @@ const {
     getStarshipImage,
     getPlanetImage
 
-} = swapiService;
-
+} = swapiService;*/
 
 const PersonDetails = ({itemId})=>{
 
-    let Component = withDataUpdate(
-        ItemDetail,
-        getPerson,
-        getPersonImage,
-        itemId,
-    );
-
-    return <Component>
-                <Record field = "gender" label = "Gender"/>
-                <Record field = "eyeColor" label = "Eye Color"/>
-           </Component>
-
+    const Wrapped = (props)=> {
+        let Component = withDataUpdate(
+            ItemDetail,
+            props.swapiService.getPerson,
+            props.swapiService.getPersonImage,
+            itemId,
+        );
+        return <Component>
+            <Record field="gender" label="Gender"/>
+            <Record field="eyeColor" label="Eye Color"/>
+        </Component>
+    };
+    const ComponentFinal = withSwapiService( Wrapped );
+    return <ComponentFinal/>;
 };
 
+/*const PersonDetails = ({itemId})=>{
+    return <SwapiServiceConsumer>
+        {
+            ({getPerson, getPersonImage}) => {
+                let Component = withDataUpdate(
+                    ItemDetail,
+                    getPerson,
+                    getPersonImage,
+                    itemId,
+                );
+                return <Component>
+                    <Record field="gender" label="Gender"/>
+                    <Record field="eyeColor" label="Eye Color"/>
+                </Component>
+            }
+        }
+    </SwapiServiceConsumer>
+};*/
 const PlanetDetails = ({itemId})=>{
-
-    let Component = withDataUpdate(
-        ItemDetail,
-        getPlanet,
-        getPlanetImage,
-        itemId,
-    );
-
-    return <Component>
-        <Record field = "name" label = "Name"/>
-        <Record field = "population" label = "population"/>
-    </Component>
+    return <SwapiServiceConsumer>
+        {
+            ({getPlanet, getPlanetImage}) => {
+                let Component = withDataUpdate(
+                    ItemDetail,
+                    getPlanet,
+                    getPlanetImage,
+                    itemId,
+                );
+                return <Component>
+                    <Record field = "name" label = "Name"/>
+                    <Record field = "population" label = "population"/>
+                </Component>
+            }
+        }
+    </SwapiServiceConsumer>
 };
 
-const StarshipDetails = ({itemId})=>{
+const StarshipDetails =({itemId})=>{
+    return <SwapiServiceConsumer>
+        {
+            ({getStarship, getStarshipImage}) => {
+                let Component = withDataUpdate(
+                    ItemDetail,
+                    getStarship,
+                    getStarshipImage,
+                    itemId,
+                );
+                return <Component>
+                    <Record field = "name" label = "Name"/>
+                    <Record field = "length" label = "length"/>
+                    <Record field = "cost_in_credits" label = "Cost"/>
+                </Component>
+            }
+        }
+    </SwapiServiceConsumer>
+};
 
+/*const StarshipDetails = ({itemId})=>{
     let Component = withDataUpdate(
         ItemDetail,
         getStarship,
         getStarshipImage,
         itemId,
     );
-
     return <Component>
         <Record field = "name" label = "Name"/>
         <Record field = "length" label = "length"/>
         <Record field = "cost_in_credits" label = "Cost"/>
     </Component>
-};
-const PersonDetailsOld = ({itemId})=>{
+};*/
+
+export {
+    PersonDetails,
+    PlanetDetails,
+    StarshipDetails
+}
+/*const PersonDetailsOld = ({itemId})=>{
     return <ItemDetail
         getImgUrl={getPersonImage}
         getData={getPerson}
@@ -71,28 +120,17 @@ const PersonDetailsOld = ({itemId})=>{
         <Record field = "gender" label = "Gender"/>
         <Record field = "eyeColor" label = "Eye Color"/>
     </ItemDetail>
-};
+};*/
+/*const PlanetDetailsWithoutContext = ({itemId})=>{
+    let Component = withDataUpdate(
+        ItemDetail,
+        getPlanet,
+        getPlanetImage,
+        itemId,
+    );
+    return <Component>
+        <Record field = "name" label = "Name"/>
+        <Record field = "population" label = "population"/>
+    </Component>
+};*/
 
-
-export {
-    PersonDetails,
-    PlanetDetails,
-    StarshipDetails
-}
-
-
-
-
-
-/*
-const PersonList = withData(ItemsList, getAllPeople);
-const PlanetList = withData(ItemsList, getAllPlanets);
-const StarshipList = withData(ItemsList, getAllStarships);
-
-
-
-export {
-    PersonList,
-    PlanetList,
-    StarshipList
-}*/

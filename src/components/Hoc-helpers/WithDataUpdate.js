@@ -13,13 +13,11 @@ const withDataUpdate = (ViewComponent, getData, getImgUrl, itemId)=>{
                 error: false
             };
 
-
         componentDidMount() {
             this.updateItem();
         }
 
         updateItem = ()=>{
-
             if (!itemId) {return;}
             this.setState({loading: true});
 

@@ -1,12 +1,10 @@
 import React from 'react';
 import Header from "../header/Header"
 import RandomPlanet from "../random-planet/Random-planet";
-import ItemsList from "../item-list/ItemsList";
-import ItemDetail from "../item-detail/ItemDetail";
-import PeoplePage from "../peoplePage/PeoplePage";
 import SwapiService from "../../services/swapi-service";
-import Row from "../row/Row";
-import Record from "../record/Record";
+
+
+import {SwapiServiceProvider} from "../swapi-service-context/swapi-service-context"
 import {  PersonList,
     PlanetList,
     StarshipList,
@@ -51,18 +49,20 @@ export default class App extends React.Component {
     render() {
 
         return (
-            <div className={"container"}>
-                <Header {...this.header}/>
-                <RandomPlanet />
-                {/*<PeoplePage/>*/}
-                <div className="f-row f-row_start row-detail">
-                     <PersonList onSelect={()=>{}}/>
-                     <PlanetList onSelect={()=>{}} renderItem={this.renderPlanetListItem}/>
-                     <PersonDetails itemId={4} />
-                     <PlanetDetails itemId={6}/>
-                     <StarshipDetails itemId={9} />
+            <SwapiServiceProvider value={this.swapiService}>
+                <div className={"container"}>
+                    <Header {...this.header}/>
+                    <RandomPlanet />
+                    {/*<PeoplePage/>*/}
+                    <div className="f-row f-row_start row-detail">
+                         <PersonList onSelect={()=>{}}/>
+                         <PlanetList onSelect={()=>{}} renderItem={this.renderPlanetListItem}/>
+                         <PersonDetails itemId={4} />
+                        {/* <PlanetDetails itemId={6}/>
+                         <StarshipDetails itemId={9} />*/}
+                    </div>
                 </div>
-            </div>
+            </SwapiServiceProvider>
         )
 
     }
