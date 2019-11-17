@@ -58,8 +58,8 @@ export default class App extends React.Component {
                          <PersonList onSelect={()=>{}}/>
                          <PlanetList onSelect={()=>{}} renderItem={this.renderPlanetListItem}/>
                          <PersonDetails itemId={4} />
-                        {/* <PlanetDetails itemId={6}/>
-                         <StarshipDetails itemId={9} />*/}
+                         <PlanetDetails itemId={6}/>
+                         <StarshipDetails itemId={9} />
                     </div>
                 </div>
             </SwapiServiceProvider>

@@ -43,7 +43,6 @@ const withDataUpdate = (ViewComponent, getData, getImgUrl, itemId)=>{
             }
         }
 
-
         render(){
             const {item, image, loading, error} = this.state;
 
@@ -52,17 +51,11 @@ const withDataUpdate = (ViewComponent, getData, getImgUrl, itemId)=>{
             if (loading) return <Spinner/>;
 
             return(
-
                 <ViewComponent {...this.props} item={item} image={image}>
                     {this.props.children}
                 </ViewComponent>
             )
         }
-
     }
-
-
-
-
 };
-            export default withDataUpdate;
+export default withDataUpdate;

@@ -18,23 +18,7 @@ import withSwapiService from "../Hoc-helpers/WithSwapiService"
 
 } = swapiService;*/
 
-const PersonDetails = ({itemId})=>{
 
-    const Wrapped = (props)=> {
-        let Component = withDataUpdate(
-            ItemDetail,
-            props.swapiService.getPerson,
-            props.swapiService.getPersonImage,
-            itemId,
-        );
-        return <Component>
-            <Record field="gender" label="Gender"/>
-            <Record field="eyeColor" label="Eye Color"/>
-        </Component>
-    };
-    const ComponentFinal = withSwapiService( Wrapped );
-    return <ComponentFinal/>;
-};
 
 /*const PersonDetails = ({itemId})=>{
     return <SwapiServiceConsumer>
@@ -108,7 +92,6 @@ const StarshipDetails =({itemId})=>{
 };*/
 
 export {
-    PersonDetails,
     PlanetDetails,
     StarshipDetails
 }
