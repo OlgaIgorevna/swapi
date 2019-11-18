@@ -1,11 +1,8 @@
 import React from 'react';
 import './items-list.css';
-
+import PropTypes from 'proptypes'
 
  const ItemsList = (props)=>{
-
-     console.log("children", props.children);
-
    const renderItems = (arr)=>{
         if (!arr) return null;
         return arr.map((item) =>
@@ -16,7 +13,6 @@ import './items-list.css';
             </div>
         )
     };
-
         const {data} =props;
         const items = renderItems(data);
         return (
@@ -25,9 +21,14 @@ import './items-list.css';
             </div>
         )
 };
-
-
-
+/* ItemsList.defaultProps = {
+     onSelect: ()=>{}
+ }*/;
+ItemsList.propTypes={
+    onSelect: PropTypes.func,
+    data: PropTypes.arrayOf(PropTypes.object).isRequired,
+    children: PropTypes.func.isRequired
+};
 //const {getAllPeople} = new SwapiService();
 
 //export default withData(ItemsList, getAllPeople);

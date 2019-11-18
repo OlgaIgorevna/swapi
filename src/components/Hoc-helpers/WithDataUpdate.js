@@ -46,7 +46,7 @@ const withDataUpdate = (ViewComponent, getData, getImgUrl, itemId)=>{
         render(){
             const {item, image, loading, error} = this.state;
 
-            if ((!item)&& (!error) && (!loading)) return <span>Please, choose a person from a list</span>;
+            if ((!item)&& (!error) && (!loading)) return <span>Please, choose an item from a list</span>;
             if (error) return <ErrorIndicator/>;
             if (loading) return <Spinner/>;
 
