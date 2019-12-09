@@ -2,27 +2,35 @@ import React from 'react';
 import Header from "../header/Header"
 import RandomPlanet from "../random-planet/Random-planet";
 import SwapiService from "../../services/swapi-service";
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Redirect, Switch} from 'react-router-dom';
 
 import {SwapiServiceProvider} from "../swapi-service-context/swapi-service-context"
-import {  PersonList,
-    PlanetList,
-    StarshipList,
-    PersonDetails,
-    PlanetDetails,
+import {
     StarshipDetails,
 } from "../sw-components"
 import Row from "../row/Row";
 import PeoplePage from "../../pages/PeoplePage";
 import PlanetPage from "../../pages/PlanetPage";
 import StarshipPage from "../../pages/StarshipPage";
+import SecretPage from "../../pages/SecretPage";
+import LoginPage from "../../pages/LoginPage";
 export default class App extends React.Component {
     swapiService = new SwapiService();
+
+    state={
+        isLoggedIn: false
+    };
+    onLogin=()=>{
+        this.setState({isLoggedIn: true})
+    };
 
     header =  {title: 'Star DB',
         menu: [{to: "/people/", label: "people"},
             {to: "/planets/", label: "planets"},
-            {to: "/starships/", label: "starships"}]};
+            {to: "/starships/", label: "starships"},
+            {to: "/login/", label: "login page"},
+            {to: "/secretpage/", label: "secret page"},
+        ]};
 
     arrayClone = (arr)=> {
         let i, copy;
@@ -58,13 +66,26 @@ export default class App extends React.Component {
                     <div className={"container"}>
                         <Header {...this.header}/>
                         <RandomPlanet updateInterval={10000}/>
-                        <Route path={"/"} exact={true} render={()=>{return <h2>Welcome to StarDB</h2>}}/>
-                        <Route path={"/people"} component={PeoplePage}/>
-                        <Route path={"/planets"} component={PlanetPage}/>
-                        <Route path={"/starships"} exact={true} component={StarshipPage}/>
-                        <Route path={"/starships/:id"} render={({match,location,history})=>{
-                                return <StarshipDetails itemId={match.params.id}/>
-                            }}/>
+                        <Switch>
+                            <Route path={"/"} exact={true} render={()=>{return <h2>Welcome to StarDB</h2>}}/>
+                            <Route path={"/people/:id?"} component={PeoplePage}/>
+                            <Route path={"/planets"} component={PlanetPage}/>
+                            <Route path={"/starships"} exact={true} component={StarshipPage}/>
+                            <Route path={"/starships/:id"} render={({match,location,history})=>{
+                                    return <StarshipDetails itemId={match.params.id}/>
+                                }}/>
+                            <Route path={"/login"}
+                                   render={()=>{
+                                       return <LoginPage isLoggedIn={this.state.isLoggedIn} onLogin={this.onLogin}/>
+                                   }}/>
+                            <Route path={"/secretpage"}
+                                   render={()=>{
+                                       return <SecretPage isLoggedIn={this.state.isLoggedIn}/>
+                                   }}/>
+                            {/*<Redirect to={"/"}/>*/}
+                            <Route render={()=>{return <div>Page not found</div>}}/>
+                        </Switch>
+
                      {/*   <PeoplePage/>
                         <PlanetPage/>
                         <StarshipPage/>*/}
